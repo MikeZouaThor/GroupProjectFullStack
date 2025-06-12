@@ -9,7 +9,6 @@ class CarMake(models.Model):
     def __str__(self):
         return self.name
 
-
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE, related_name='car_models')
     name = models.CharField(max_length=50, help_text="Enter car model name")
